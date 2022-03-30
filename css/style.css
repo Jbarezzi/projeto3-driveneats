@@ -1,0 +1,13 @@
+@media (max-width: 414px) {
+    h1 {
+        font-family: "Righteous", sans-serif;
+        font-size: 44px;
+        font-weight: 400;
+        color: #FFFFFF;
+    }
+    
+    .header {
+        height: 92px;
+        background-color: #CF2B2B;
+    }
+}
