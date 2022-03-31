@@ -4,10 +4,23 @@
         font-size: 44px;
         font-weight: 400;
         color: #FFFFFF;
+        margin: 8px 0 0 21px;
     }
     
     .header {
         height: 92px;
+        width: 100%;
         background-color: #CF2B2B;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .header p {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 4px 0 18px 21px;
     }
 }
