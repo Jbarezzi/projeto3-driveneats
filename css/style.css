@@ -2,7 +2,10 @@
     body {
         background-color: #EEEEEE;
         font-family: "Roboto", sans-serif;
-        padding-left: 19px;
+    }
+
+    img {
+        border-radius: 4px;
     }
     
     h1 {
@@ -18,6 +21,7 @@
         font-size: 26px;
         color: #333333;
         font-weight: 400;
+        margin-bottom: 17px;
     }
 
     h3 {
@@ -53,18 +57,34 @@
         margin: 4px 0 18px 21px;
     }
 
-    .order {
-        margin-top: 123px;
+    .content {
+        margin-top: 118px;
+        margin-bottom: 108px;
+        margin-left: 20px;
+    }
+
+    .order-row {
+        margin-top: 27px;
         display: flex;
+        flex-direction: column;
+    }
+
+    .order {
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
     }
 
     .product {
         height: 216px;
-        width: 172px;
         background-color: #FFFFFF;
+        padding: 0 14px 0 14px;
         border-radius: 9px;
+        margin-right: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
-
 
     .product p:nth-child(3) {
         font-size: 15px;
