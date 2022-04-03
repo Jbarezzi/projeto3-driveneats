@@ -29,9 +29,9 @@
 
             </div>
 
-            <div class="order">
+            <div class="order food">
 
-                <div class="product" onclick="select()">
+                <div class="product" onclick="selectFood(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
@@ -39,20 +39,20 @@
                     <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectFood(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectFood(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
             </div>
@@ -67,30 +67,30 @@
 
             </div>
 
-            <div class="order">
+            <div class="order drink">
 
-                <div class="product">
+                <div class="product" onclick="selectDrink(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectDrink(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectDrink(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
             </div>
@@ -105,30 +105,30 @@
 
             </div>
 
-            <div class="order">
+            <div class="order dessert">
 
-                <div class="product">
+                <div class="product" onclick="selectDessert(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectDessert(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
-                <div class="product">
+                <div class="product" onclick="selectDessert(this)">
                     <img src="./images/frango.png">
                     <h3>Frango Yin Yang</h3>
                     <p>Um pouco de batata, um pouco de salada</p>
                     <p>R$ 14,90</p>
-                    <ion-icon name="checkmark-circle"></ion-icon>
+                    <ion-icon name="checkmark-circle" class="hidden"></ion-icon>
                 </div>
                 
             </div>
@@ -139,7 +139,7 @@
     
     <div class="footer">
 
-        <button>Selecione os 3 itens<br>para fechar o pedido</button>
+        <button onclick="order()" disabled>Selecione os 3 itens<br>para fechar o pedido</button>
 
     </div>
 
