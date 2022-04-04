@@ -1,4 +1,4 @@
-let food, drink, dessert;
+let food, foodPrice, drink, drinkPrice, dessert, dessertPrice;
 
 function selectFood(foodBox) {
 
@@ -15,6 +15,7 @@ function selectFood(foodBox) {
     foodBox.children[4].classList.remove("hidden");
 
     food = foodBox.children[1].innerHTML;
+    foodPrice = foodBox.children[3].innerHTML;
     
     order();
 }
@@ -34,6 +35,7 @@ function selectDrink(drinkBox) {
     drinkBox.children[4].classList.remove("hidden");
 
     drink = drinkBox.children[1].innerHTML;
+    drinkPrice = drinkBox.children[3].innerHTML;
     
     order();
 }
@@ -53,6 +55,7 @@ function selectDessert(dessertBox) {
     dessertBox.children[4].classList.remove("hidden");
 
     dessert = dessertBox.children[1].innerHTML;
+    dessertPrice = dessertBox.children[3].innerHTML;
     
     order();
 }
@@ -69,19 +72,23 @@ function order() {
 }
 
 function whatsapp() {
-    let price = 25;
+    let price = 
+        parseFloat(foodPrice.replace("R$ ", "").replace(",", ".")) 
+        + parseFloat(drinkPrice.replace("R$ ", "").replace(",", ".")) 
+        + parseFloat(dessertPrice.replace("R$ ", "").replace(",", "."));
+    price = price.toFixed(2).replace(".", ",")
     let name = prompt("Qual o seu nome?");
     let adress = prompt("Qual o endereço de entrega?");
 
     let orderText = 
         `Olá, gostaria de fazer o pedido: 
-            - Prato: ${food} 
-            - Bebida: ${drink} 
-            - Sobremesa: ${dessert} 
+            - Prato: ${food}
+            - Bebida: ${drink}
+            - Sobremesa: ${dessert}
         Total: R$ ${price}
         
-        Nome: ${name} 
-        Endereço: ${adress};`
+        Nome: ${name}
+        Endereço: ${adress}`;
         
     encodedOrderText = encodeURIComponent(orderText);
 
