@@ -14,7 +14,7 @@ function selectFood(foodBox) {
     foodBox.classList.add("selected-box");
     foodBox.children[4].classList.remove("hidden");
 
-    food = foodBox;
+    food = foodBox.children[1].innerHTML;
     
     order();
 }
@@ -33,7 +33,7 @@ function selectDrink(drinkBox) {
     drinkBox.classList.add("selected-box");
     drinkBox.children[4].classList.remove("hidden");
 
-    drink = drinkBox;
+    drink = drinkBox.children[1].innerHTML;
     
     order();
 }
@@ -52,7 +52,7 @@ function selectDessert(dessertBox) {
     dessertBox.classList.add("selected-box");
     dessertBox.children[4].classList.remove("hidden");
 
-    dessert = dessertBox;
+    dessert = dessertBox.children[1].innerHTML;
     
     order();
 }
@@ -60,10 +60,33 @@ function selectDessert(dessertBox) {
 function order() {
 
     if ( food && drink && dessert) {
-        const disabledButton = document.querySelector("button")
-        disabledButton.toggleAttribute("disabled")
-        disabledButton.innerHTML = "Fechar Pedido"
+        const disabledButton = document.querySelector("button");
+        disabledButton.removeAttribute("disabled");
+        disabledButton.innerHTML = "Fechar Pedido";
         disabledButton.style.backgroundColor = "#32B72F";
     }
+
+}
+
+function whatsapp() {
+    let price = 25;
+    let name = prompt("Qual o seu nome?");
+    let adress = prompt("Qual o endereço de entrega?");
+
+    let orderText = 
+        `Olá, gostaria de fazer o pedido: 
+            - Prato: ${food} 
+            - Bebida: ${drink} 
+            - Sobremesa: ${dessert} 
+        Total: R$ ${price}
+        
+        Nome: ${name} 
+        Endereço: ${adress};`
+        
+    encodedOrderText = encodeURIComponent(orderText);
+
+    let link = `https://wa.me/5532984097756?text=${encodedOrderText}`;
+
+    window.open(link);
 
 }
